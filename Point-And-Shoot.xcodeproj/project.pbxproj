@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718C219EE57100750EF3 /* AppDelegate.swift */; };
+		9BAF718F219EE57100750EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718E219EE57100750EF3 /* ViewController.swift */; };
+		9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7190219EE57100750EF3 /* Main.storyboard */; };
+		9BAF7194219EE57700750EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7193219EE57700750EF3 /* Assets.xcassets */; };
+		9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */; };
+		9BAF71A2219EE57700750EF3 /* Point_And_ShootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71A1219EE57700750EF3 /* Point_And_ShootTests.swift */; };
+		9BAF71AD219EE57800750EF3 /* Point_And_ShootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BAF719E219EE57700750EF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAF7181219EE57100750EF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAF7188219EE57100750EF3;
+			remoteInfo = "Point-And-Shoot";
+		};
+		9BAF71A9219EE57800750EF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAF7181219EE57100750EF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAF7188219EE57100750EF3;
+			remoteInfo = "Point-And-Shoot";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BAF7189219EE57100750EF3 /* Point-And-Shoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Point-And-Shoot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF718C219EE57100750EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BAF718E219EE57100750EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BAF7191219EE57100750EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BAF7193219EE57700750EF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BAF7196219EE57700750EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BAF7198219EE57700750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF719D219EE57700750EF3 /* Point-And-ShootTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Point-And-ShootTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF71A1219EE57700750EF3 /* Point_And_ShootTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point_And_ShootTests.swift; sourceTree = "<group>"; };
+		9BAF71A3219EE57700750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF71A8219EE57800750EF3 /* Point-And-ShootUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Point-And-ShootUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point_And_ShootUITests.swift; sourceTree = "<group>"; };
+		9BAF71AE219EE57800750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BAF7186219EE57100750EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF719A219EE57700750EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF71A5219EE57800750EF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BAF7180219EE57100750EF3 = {
+			isa = PBXGroup;
+			children = (
+				9BAF718B219EE57100750EF3 /* Point-And-Shoot */,
+				9BAF71A0219EE57700750EF3 /* Point-And-ShootTests */,
+				9BAF71AB219EE57800750EF3 /* Point-And-ShootUITests */,
+				9BAF718A219EE57100750EF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BAF718A219EE57100750EF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF7189219EE57100750EF3 /* Point-And-Shoot.app */,
+				9BAF719D219EE57700750EF3 /* Point-And-ShootTests.xctest */,
+				9BAF71A8219EE57800750EF3 /* Point-And-ShootUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BAF718B219EE57100750EF3 /* Point-And-Shoot */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF718C219EE57100750EF3 /* AppDelegate.swift */,
+				9BAF718E219EE57100750EF3 /* ViewController.swift */,
+				9BAF7190219EE57100750EF3 /* Main.storyboard */,
+				9BAF7193219EE57700750EF3 /* Assets.xcassets */,
+				9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */,
+				9BAF7198219EE57700750EF3 /* Info.plist */,
+			);
+			path = "Point-And-Shoot";
+			sourceTree = "<group>";
+		};
+		9BAF71A0219EE57700750EF3 /* Point-And-ShootTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF71A1219EE57700750EF3 /* Point_And_ShootTests.swift */,
+				9BAF71A3219EE57700750EF3 /* Info.plist */,
+			);
+			path = "Point-And-ShootTests";
+			sourceTree = "<group>";
+		};
+		9BAF71AB219EE57800750EF3 /* Point-And-ShootUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */,
+				9BAF71AE219EE57800750EF3 /* Info.plist */,
+			);
+			path = "Point-And-ShootUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BAF7188219EE57100750EF3 /* Point-And-Shoot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF71B1219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-Shoot" */;
+			buildPhases = (
+				9BAF7185219EE57100750EF3 /* Sources */,
+				9BAF7186219EE57100750EF3 /* Frameworks */,
+				9BAF7187219EE57100750EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Point-And-Shoot";
+			productName = "Point-And-Shoot";
+			productReference = 9BAF7189219EE57100750EF3 /* Point-And-Shoot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BAF719C219EE57700750EF3 /* Point-And-ShootTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF71B4219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootTests" */;
+			buildPhases = (
+				9BAF7199219EE57700750EF3 /* Sources */,
+				9BAF719A219EE57700750EF3 /* Frameworks */,
+				9BAF719B219EE57700750EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BAF719F219EE57700750EF3 /* PBXTargetDependency */,
+			);
+			name = "Point-And-ShootTests";
+			productName = "Point-And-ShootTests";
+			productReference = 9BAF719D219EE57700750EF3 /* Point-And-ShootTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BAF71A7219EE57800750EF3 /* Point-And-ShootUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAF71B7219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootUITests" */;
+			buildPhases = (
+				9BAF71A4219EE57800750EF3 /* Sources */,
+				9BAF71A5219EE57800750EF3 /* Frameworks */,
+				9BAF71A6219EE57800750EF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BAF71AA219EE57800750EF3 /* PBXTargetDependency */,
+			);
+			name = "Point-And-ShootUITests";
+			productName = "Point-And-ShootUITests";
+			productReference = 9BAF71A8219EE57800750EF3 /* Point-And-ShootUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BAF7181219EE57100750EF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Erik Hede";
+				TargetAttributes = {
+					9BAF7188219EE57100750EF3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9BAF719C219EE57700750EF3 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9BAF7188219EE57100750EF3;
+					};
+					9BAF71A7219EE57800750EF3 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9BAF7188219EE57100750EF3;
+					};
+				};
+			};
+			buildConfigurationList = 9BAF7184219EE57100750EF3 /* Build configuration list for PBXProject "Point-And-Shoot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BAF7180219EE57100750EF3;
+			productRefGroup = 9BAF718A219EE57100750EF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BAF7188219EE57100750EF3 /* Point-And-Shoot */,
+				9BAF719C219EE57700750EF3 /* Point-And-ShootTests */,
+				9BAF71A7219EE57800750EF3 /* Point-And-ShootUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BAF7187219EE57100750EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */,
+				9BAF7194219EE57700750EF3 /* Assets.xcassets in Resources */,
+				9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF719B219EE57700750EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF71A6219EE57800750EF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BAF7185219EE57100750EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF718F219EE57100750EF3 /* ViewController.swift in Sources */,
+				9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF7199219EE57700750EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF71A2219EE57700750EF3 /* Point_And_ShootTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAF71A4219EE57800750EF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BAF71AD219EE57800750EF3 /* Point_And_ShootUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BAF719F219EE57700750EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAF7188219EE57100750EF3 /* Point-And-Shoot */;
+			targetProxy = 9BAF719E219EE57700750EF3 /* PBXContainerItemProxy */;
+		};
+		9BAF71AA219EE57800750EF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAF7188219EE57100750EF3 /* Point-And-Shoot */;
+			targetProxy = 9BAF71A9219EE57800750EF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BAF7190219EE57100750EF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BAF7191219EE57100750EF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BAF7196219EE57700750EF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BAF71AF219EE57800750EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BAF71B0219EE57800750EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BAF71B2219EE57800750EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-Shoot/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-Shoot";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BAF71B3219EE57800750EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-Shoot/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-Shoot";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BAF71B5219EE57800750EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-ShootTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-ShootTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Point-And-Shoot.app/Point-And-Shoot";
+			};
+			name = Debug;
+		};
+		9BAF71B6219EE57800750EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-ShootTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-ShootTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Point-And-Shoot.app/Point-And-Shoot";
+			};
+			name = Release;
+		};
+		9BAF71B8219EE57800750EF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-ShootUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-ShootUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Point-And-Shoot";
+			};
+			name = Debug;
+		};
+		9BAF71B9219EE57800750EF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJTZD7F823;
+				INFOPLIST_FILE = "Point-And-ShootUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-ShootUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Point-And-Shoot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BAF7184219EE57100750EF3 /* Build configuration list for PBXProject "Point-And-Shoot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF71AF219EE57800750EF3 /* Debug */,
+				9BAF71B0219EE57800750EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF71B1219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-Shoot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF71B2219EE57800750EF3 /* Debug */,
+				9BAF71B3219EE57800750EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF71B4219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF71B5219EE57800750EF3 /* Debug */,
+				9BAF71B6219EE57800750EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAF71B7219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BAF71B8219EE57800750EF3 /* Debug */,
+				9BAF71B9219EE57800750EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BAF7181219EE57100750EF3 /* Project object */;
+}
