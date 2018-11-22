@@ -14,6 +14,7 @@
 		9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */; };
 		9BAF71A2219EE57700750EF3 /* Point_And_ShootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71A1219EE57700750EF3 /* Point_And_ShootTests.swift */; };
 		9BAF71AD219EE57800750EF3 /* Point_And_ShootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */; };
+		9BAF71BB219F021800750EF3 /* Body1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF71BA219F021700750EF3 /* Body1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9BAF71A8219EE57800750EF3 /* Point-And-ShootUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Point-And-ShootUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point_And_ShootUITests.swift; sourceTree = "<group>"; };
 		9BAF71AE219EE57800750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF71BA219F021700750EF3 /* Body1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Body1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B28A79121A6B859009FB3CD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF71BA219F021700750EF3 /* Body1.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9B28A79221A6B88E009FB3CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B28A79321A6B8E2009FB3CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF7190219EE57100750EF3 /* Main.storyboard */,
+				9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B28A79421A6B8F4009FB3CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9BAF718C219EE57100750EF3 /* AppDelegate.swift */,
+				9BAF718E219EE57100750EF3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B28A79521A6B93F009FB3CD /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		9BAF7180219EE57100750EF3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +139,12 @@
 		9BAF718B219EE57100750EF3 /* Point-And-Shoot */ = {
 			isa = PBXGroup;
 			children = (
-				9BAF718C219EE57100750EF3 /* AppDelegate.swift */,
-				9BAF718E219EE57100750EF3 /* ViewController.swift */,
-				9BAF7190219EE57100750EF3 /* Main.storyboard */,
+				9B28A79421A6B8F4009FB3CD /* Controller */,
+				9B28A79321A6B8E2009FB3CD /* View */,
+				9B28A79221A6B88E009FB3CD /* Model */,
+				9B28A79121A6B859009FB3CD /* Images */,
+				9B28A79521A6B93F009FB3CD /* Supporting files */,
 				9BAF7193219EE57700750EF3 /* Assets.xcassets */,
-				9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */,
 				9BAF7198219EE57700750EF3 /* Info.plist */,
 			);
 			path = "Point-And-Shoot";
@@ -232,6 +275,7 @@
 				9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */,
 				9BAF7194219EE57700750EF3 /* Assets.xcassets in Resources */,
 				9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */,
+				9BAF71BB219F021800750EF3 /* Body1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
