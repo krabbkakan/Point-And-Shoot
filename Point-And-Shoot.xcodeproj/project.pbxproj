@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BDCD8A402E8E847326AB38C /* Pods_Point_And_Shoot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1858D1C8764ECB4BF59EE725 /* Pods_Point_And_Shoot.framework */; };
+		7B466E817E84DBEF71C73855 /* Pods_Point_And_ShootUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C300D21C5D33E652114CC59 /* Pods_Point_And_ShootUITests.framework */; };
+		884EE6163E7FE31BA7F019E1 /* Pods_Point_And_ShootTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D853A8B7B6DCD94F882B61 /* Pods_Point_And_ShootTests.framework */; };
+		9B633A2221A7723400E37254 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2121A7723300E37254 /* Button.png */; };
+		9B633A2421A7723B00E37254 /* Film-Hatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2321A7723B00E37254 /* Film-Hatch.png */; };
+		9B633A2621A77AF600E37254 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2521A77AF600E37254 /* GoogleService-Info.plist */; };
+		9B7B03E721A782AD003A1CD4 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B03E621A782AD003A1CD4 /* Film.swift */; };
+		9B7B03E921A782C1003A1CD4 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B03E821A782C1003A1CD4 /* Picture.swift */; };
 		9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718C219EE57100750EF3 /* AppDelegate.swift */; };
 		9BAF718F219EE57100750EF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718E219EE57100750EF3 /* ViewController.swift */; };
 		9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7190219EE57100750EF3 /* Main.storyboard */; };
@@ -35,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1858D1C8764ECB4BF59EE725 /* Pods_Point_And_Shoot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Point_And_Shoot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D853A8B7B6DCD94F882B61 /* Pods_Point_And_ShootTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Point_And_ShootTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C300D21C5D33E652114CC59 /* Pods_Point_And_ShootUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Point_And_ShootUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F4253C34361E75237868798 /* Pods-Point-And-ShootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-ShootUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-ShootUITests/Pods-Point-And-ShootUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71ABB8A5B0F830A232FC17E3 /* Pods-Point-And-ShootTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-ShootTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-ShootTests/Pods-Point-And-ShootTests.release.xcconfig"; sourceTree = "<group>"; };
+		82EA0BF4218AB6FED32430A6 /* Pods-Point-And-ShootTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-ShootTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-ShootTests/Pods-Point-And-ShootTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B633A2121A7723300E37254 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		9B633A2321A7723B00E37254 /* Film-Hatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Film-Hatch.png"; sourceTree = "<group>"; };
+		9B633A2521A77AF600E37254 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B7B03E621A782AD003A1CD4 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		9B7B03E821A782C1003A1CD4 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		9BAF7189219EE57100750EF3 /* Point-And-Shoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Point-And-Shoot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAF718C219EE57100750EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAF718E219EE57100750EF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +68,9 @@
 		9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point_And_ShootUITests.swift; sourceTree = "<group>"; };
 		9BAF71AE219EE57800750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAF71BA219F021700750EF3 /* Body1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Body1.png; sourceTree = "<group>"; };
+		B83EE5FC721D6F2E41FB9530 /* Pods-Point-And-ShootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-ShootUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-ShootUITests/Pods-Point-And-ShootUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD2B18A16FF647FCA2FCC0D /* Pods-Point-And-Shoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-Shoot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot.release.xcconfig"; sourceTree = "<group>"; };
+		D071CBFC98481CD9D8CD4F70 /* Pods-Point-And-Shoot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-Shoot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDCD8A402E8E847326AB38C /* Pods_Point_And_Shoot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884EE6163E7FE31BA7F019E1 /* Pods_Point_And_ShootTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B466E817E84DBEF71C73855 /* Pods_Point_And_ShootUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,15 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				9BAF71BA219F021700750EF3 /* Body1.png */,
+				9B633A2121A7723300E37254 /* Button.png */,
+				9B633A2321A7723B00E37254 /* Film-Hatch.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		9B28A79221A6B88E009FB3CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9B28A79321A6B8E2009FB3CD /* View */ = {
@@ -109,11 +129,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9B28A79521A6B93F009FB3CD /* Supporting files */ = {
+		9B7B03E521A7822C003A1CD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B7B03E621A782AD003A1CD4 /* Film.swift */,
+				9B7B03E821A782C1003A1CD4 /* Picture.swift */,
 			);
-			path = "Supporting files";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9BAF7180219EE57100750EF3 = {
@@ -123,6 +145,8 @@
 				9BAF71A0219EE57700750EF3 /* Point-And-ShootTests */,
 				9BAF71AB219EE57800750EF3 /* Point-And-ShootUITests */,
 				9BAF718A219EE57100750EF3 /* Products */,
+				D8CC6558FF5C29ACBEC6D6D5 /* Pods */,
+				F416BF37D45AA25F90E3652E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,11 +165,11 @@
 			children = (
 				9B28A79421A6B8F4009FB3CD /* Controller */,
 				9B28A79321A6B8E2009FB3CD /* View */,
-				9B28A79221A6B88E009FB3CD /* Model */,
+				9B7B03E521A7822C003A1CD4 /* Model */,
 				9B28A79121A6B859009FB3CD /* Images */,
-				9B28A79521A6B93F009FB3CD /* Supporting files */,
 				9BAF7193219EE57700750EF3 /* Assets.xcassets */,
 				9BAF7198219EE57700750EF3 /* Info.plist */,
+				9B633A2521A77AF600E37254 /* GoogleService-Info.plist */,
 			);
 			path = "Point-And-Shoot";
 			sourceTree = "<group>";
@@ -168,6 +192,29 @@
 			path = "Point-And-ShootUITests";
 			sourceTree = "<group>";
 		};
+		D8CC6558FF5C29ACBEC6D6D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D071CBFC98481CD9D8CD4F70 /* Pods-Point-And-Shoot.debug.xcconfig */,
+				BFD2B18A16FF647FCA2FCC0D /* Pods-Point-And-Shoot.release.xcconfig */,
+				82EA0BF4218AB6FED32430A6 /* Pods-Point-And-ShootTests.debug.xcconfig */,
+				71ABB8A5B0F830A232FC17E3 /* Pods-Point-And-ShootTests.release.xcconfig */,
+				B83EE5FC721D6F2E41FB9530 /* Pods-Point-And-ShootUITests.debug.xcconfig */,
+				6F4253C34361E75237868798 /* Pods-Point-And-ShootUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F416BF37D45AA25F90E3652E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1858D1C8764ECB4BF59EE725 /* Pods_Point_And_Shoot.framework */,
+				24D853A8B7B6DCD94F882B61 /* Pods_Point_And_ShootTests.framework */,
+				3C300D21C5D33E652114CC59 /* Pods_Point_And_ShootUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BAF71B1219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-Shoot" */;
 			buildPhases = (
+				0FBB4D757AFB172B3336C451 /* [CP] Check Pods Manifest.lock */,
 				9BAF7185219EE57100750EF3 /* Sources */,
 				9BAF7186219EE57100750EF3 /* Frameworks */,
 				9BAF7187219EE57100750EF3 /* Resources */,
+				AE9717E4989A34F905063C89 /* [CP] Embed Pods Frameworks */,
+				47839D1037C490FDC9483728 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BAF71B4219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootTests" */;
 			buildPhases = (
+				7A9B2C7B204520E0DA96A2C9 /* [CP] Check Pods Manifest.lock */,
 				9BAF7199219EE57700750EF3 /* Sources */,
 				9BAF719A219EE57700750EF3 /* Frameworks */,
 				9BAF719B219EE57700750EF3 /* Resources */,
+				C66C7AF31F26F66BBC3D525D /* [CP] Embed Pods Frameworks */,
+				7FBDC968384D90C9AFF95C50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BAF71B7219EE57800750EF3 /* Build configuration list for PBXNativeTarget "Point-And-ShootUITests" */;
 			buildPhases = (
+				DEBB07847009BFA12492E954 /* [CP] Check Pods Manifest.lock */,
 				9BAF71A4219EE57800750EF3 /* Sources */,
 				9BAF71A5219EE57800750EF3 /* Frameworks */,
 				9BAF71A6219EE57800750EF3 /* Resources */,
+				0DBA59A0410C47B0982F5816 /* [CP] Embed Pods Frameworks */,
+				61BFC6DB3CE60CFEB05EDF5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,10 +328,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B633A2221A7723400E37254 /* Button.png in Resources */,
 				9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */,
 				9BAF7194219EE57700750EF3 /* Assets.xcassets in Resources */,
 				9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */,
+				9B633A2421A7723B00E37254 /* Film-Hatch.png in Resources */,
 				9BAF71BB219F021800750EF3 /* Body1.png in Resources */,
+				9B633A2621A77AF600E37254 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,12 +354,188 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DBA59A0410C47B0982F5816 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-ShootUITests/Pods-Point-And-ShootUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FBB4D757AFB172B3336C451 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Point-And-Shoot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47839D1037C490FDC9483728 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61BFC6DB3CE60CFEB05EDF5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-ShootUITests/Pods-Point-And-ShootUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A9B2C7B204520E0DA96A2C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Point-And-ShootTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FBDC968384D90C9AFF95C50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-ShootTests/Pods-Point-And-ShootTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9717E4989A34F905063C89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C66C7AF31F26F66BBC3D525D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-ShootTests/Pods-Point-And-ShootTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEBB07847009BFA12492E954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Point-And-ShootUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9BAF7185219EE57100750EF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7B03E921A782C1003A1CD4 /* Picture.swift in Sources */,
 				9BAF718F219EE57100750EF3 /* ViewController.swift in Sources */,
+				9B7B03E721A782AD003A1CD4 /* Film.swift in Sources */,
 				9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +642,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -462,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -474,6 +709,7 @@
 		};
 		9BAF71B2219EE57800750EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D071CBFC98481CD9D8CD4F70 /* Pods-Point-And-Shoot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +728,7 @@
 		};
 		9BAF71B3219EE57800750EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD2B18A16FF647FCA2FCC0D /* Pods-Point-And-Shoot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +747,7 @@
 		};
 		9BAF71B5219EE57800750EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82EA0BF4218AB6FED32430A6 /* Pods-Point-And-ShootTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +769,7 @@
 		};
 		9BAF71B6219EE57800750EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71ABB8A5B0F830A232FC17E3 /* Pods-Point-And-ShootTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +791,7 @@
 		};
 		9BAF71B8219EE57800750EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83EE5FC721D6F2E41FB9530 /* Pods-Point-And-ShootUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +812,7 @@
 		};
 		9BAF71B9219EE57800750EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F4253C34361E75237868798 /* Pods-Point-And-ShootUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

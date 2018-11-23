@@ -26,16 +26,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Body1" translatesAutoresizingMaskIntoConstraints="NO" id="8na-FG-Sem">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGR-Dx-eCr">
-                                <rect key="frame" x="623" y="37" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGR-Dx-eCr">
+                                <rect key="frame" x="592" y="19" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KL0-qT-l9M"/>
+                                    <constraint firstAttribute="height" constant="100" id="pmb-w9-eq6"/>
+                                </constraints>
+                                <state key="normal" image="Button.png"/>
+                                <connections>
+                                    <action selector="takeAPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDg-X8-BBM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DXy-Ts-w5M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AGR-Dx-eCr" secondAttribute="trailing" constant="44" id="WtY-jR-qMF"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e3i-Q4-O0H"/>
+                            <constraint firstItem="AGR-Dx-eCr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="lT0-SY-uH7"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mFE-ea-444"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wDy-HR-q6R"/>
                         </constraints>
@@ -53,5 +61,6 @@
     </scenes>
     <resources>
         <image name="Body1" width="1920" height="1080"/>
+        <image name="Button.png" width="189" height="189"/>
     </resources>
 </document>
