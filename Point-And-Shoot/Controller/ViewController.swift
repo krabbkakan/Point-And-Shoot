@@ -5,7 +5,7 @@
 //  Created by Erik Hede on 16/11/2018.
 //  Copyright © 2018 Erik Hede. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import AVFoundation
 
@@ -17,6 +17,8 @@ class ViewController: UIViewController {
  
     @IBOutlet weak var previewView: UIView!
     
+    @IBOutlet weak var triggerButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCamera()
@@ -66,6 +68,24 @@ class ViewController: UIViewController {
         previewView.layer.addSublayer(videoPreviewLayer!)
     }
     
+    func saveImage(image: UIImage) -> Bool {
+        guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
+            return false
+        }
+        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+            return false
+        }
+        do {
+            try data.write(to: directory.appendingPathComponent("fileName.png")!)
+            return true
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+    
+    
+    
     @IBAction func takeAPhoto(_ sender: Any) {
         
         // Make sure capturePhotoOutput is valid
@@ -76,10 +96,12 @@ class ViewController: UIViewController {
         photoSettings.isAutoStillImageStabilizationEnabled = true
         photoSettings.isHighResolutionPhotoEnabled = true
         photoSettings.flashMode = .auto
+      
         // Call capturePhoto method by passing our photo settings and a
         // delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
     }
+    
 }
 
 extension ViewController : AVCapturePhotoCaptureDelegate {
@@ -101,16 +123,28 @@ extension ViewController : AVCapturePhotoCaptureDelegate {
             return
         }
         
-//        AVCapturePhoto fileDataRepresentation]
+        //        AVCapturePhoto fileDataRepresentation]
         
         // Initialise an UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
         if let image = capturedImage {
             // Save our captured image to photos album
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            
+            //Saving image to directory
+            let success = saveImage(image: image)
+            
+            if success {
+                print("image Saved")
+            } else {
+                print("Image couldnt be saved")
+                return
+            }
+           
         }
+    }
 }
-}
+
 
 
 

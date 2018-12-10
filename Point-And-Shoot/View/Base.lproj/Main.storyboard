@@ -18,10 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJn-jB-tfE" userLabel="PreviewView">
-                                <rect key="frame" x="236" y="0.0" width="265" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJn-jB-tfE" userLabel="PreviewView">
+                                <rect key="frame" x="292" y="20" width="232" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="2xZ-QJ-gaT"/>
+                                    <constraint firstAttribute="height" constant="100" id="zA3-M5-leS"/>
+                                </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Body1" translatesAutoresizingMaskIntoConstraints="NO" id="8na-FG-Sem">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
@@ -40,11 +43,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uJn-jB-tfE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="9o1-OK-YJx"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DXy-Ts-w5M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AGR-Dx-eCr" secondAttribute="trailing" constant="44" id="WtY-jR-qMF"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e3i-Q4-O0H"/>
                             <constraint firstItem="AGR-Dx-eCr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="lT0-SY-uH7"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mFE-ea-444"/>
+                            <constraint firstItem="uJn-jB-tfE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNA-zK-e0Z"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wDy-HR-q6R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -52,15 +57,99 @@
                     <connections>
                         <outlet property="PreviewView" destination="uJn-jB-tfE" id="Wi4-qN-uW5"/>
                         <outlet property="previewView" destination="uJn-jB-tfE" id="auY-Ne-SDh"/>
+                        <outlet property="triggerButton" destination="AGR-Dx-eCr" id="wb4-35-7XE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="27.717391304347828" y="44.927536231884062"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Sin-Sf-USm">
+            <objects>
+                <viewController id="sgz-xo-4mz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2m7-Tm-0jP">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your film" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOu-6h-msb">
+                                <rect key="frame" x="279.33333333333331" y="86.666666666666671" width="177.33333333333331" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="BFO-Kh-ek0">
+                                <rect key="frame" x="32" y="143.66666666666666" width="672" height="262.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5P9-3w-CRg">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="262.33333333333331"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" image="BwRoll.png" translatesAutoresizingMaskIntoConstraints="NO" id="HCd-nY-QtT">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="231.33333333333334"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 BW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-lW-GrY">
+                                                <rect key="frame" x="80" y="239.33333333333334" width="40" height="23.000000000000028"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="23" id="ecM-ap-2E1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gzA-KN-fiV">
+                                        <rect key="frame" x="236" y="0.0" width="200" height="262.33333333333331"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BwRoll.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-bw-5Ts">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="231"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36 BW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjd-h8-dED">
+                                                <rect key="frame" x="80" y="239.00000000000003" width="40" height="23.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-3V-bHM">
+                                        <rect key="frame" x="472" y="0.0" width="200" height="262.33333333333331"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="ColorFilm.png" translatesAutoresizingMaskIntoConstraints="NO" id="VXA-hC-HwU">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="232"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEe-jt-oA6">
+                                                <rect key="frame" x="74.666666666666629" y="239.00000000000003" width="50.666666666666657" height="23.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BFO-Kh-ek0" firstAttribute="top" secondItem="nOu-6h-msb" secondAttribute="bottom" constant="16" id="Bjz-hI-LlN"/>
+                            <constraint firstItem="hLr-8X-bZZ" firstAttribute="bottom" secondItem="BFO-Kh-ek0" secondAttribute="bottom" constant="8" id="MdA-eb-wg4"/>
+                            <constraint firstItem="BFO-Kh-ek0" firstAttribute="leading" secondItem="hLr-8X-bZZ" secondAttribute="leading" constant="32" id="XKj-H3-SB1"/>
+                            <constraint firstItem="hLr-8X-bZZ" firstAttribute="trailing" secondItem="BFO-Kh-ek0" secondAttribute="trailing" constant="32" id="blg-Tz-ZJc"/>
+                            <constraint firstItem="BFO-Kh-ek0" firstAttribute="centerX" secondItem="2m7-Tm-0jP" secondAttribute="centerX" id="uX0-KQ-OtV"/>
+                            <constraint firstItem="nOu-6h-msb" firstAttribute="centerX" secondItem="2m7-Tm-0jP" secondAttribute="centerX" id="vUU-Fx-Pfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hLr-8X-bZZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTu-O0-q5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-734.51086956521749" y="44.927536231884062"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Body1" width="1920" height="1080"/>
         <image name="Button.png" width="189" height="189"/>
+        <image name="BwRoll.png" width="200" height="231"/>
+        <image name="ColorFilm.png" width="200" height="230"/>
     </resources>
 </document>
