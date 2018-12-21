@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-oy-E0V">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-oy-E0V" customClass="HatchStyling" customModule="Point_And_Shoot" customModuleProvider="target">
                                 <rect key="frame" x="50" y="160" width="636" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B8G-nK-FTZ">
@@ -124,6 +124,11 @@
                                     <constraint firstItem="B8G-nK-FTZ" firstAttribute="top" secondItem="xmi-oy-E0V" secondAttribute="top" constant="35" id="PnT-ce-T1R"/>
                                     <constraint firstAttribute="bottom" secondItem="B8G-nK-FTZ" secondAttribute="bottom" constant="35" id="TCp-xT-bzJ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.39283609242341966" green="0.40174732272800096" blue="0.42848101364174473" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,6 +154,7 @@
                         <outlet property="counterLabel" destination="kXn-Hg-HBR" id="0XY-04-CNB"/>
                         <outlet property="filmIndicator" destination="zwg-EC-SRh" id="ycf-sf-3AS"/>
                         <outlet property="hatchOpener" destination="F3F-17-4sb" id="YYZ-Dz-fzP"/>
+                        <outlet property="hatchView" destination="xmi-oy-E0V" id="zPI-de-7pw"/>
                         <outlet property="previewView" destination="uJn-jB-tfE" id="auY-Ne-SDh"/>
                         <outlet property="triggerButton" destination="AGR-Dx-eCr" id="wb4-35-7XE"/>
                     </connections>

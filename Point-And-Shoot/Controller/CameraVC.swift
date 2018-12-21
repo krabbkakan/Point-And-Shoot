@@ -22,6 +22,7 @@ class CameraVC: UIViewController {
     
     @IBOutlet weak var hatchOpener: RoundCornersWithBorder!
     
+    @IBOutlet weak var hatchView: HatchStyling!
     
     //Variables
     var pictures = [Picture]()
@@ -126,7 +127,9 @@ class CameraVC: UIViewController {
     }
     
     @IBAction func hatchOpenerPressed(_ sender: Any) {
+       hatchView.animateHatch()
         //Destroy 3 images
+        
         
     }
     

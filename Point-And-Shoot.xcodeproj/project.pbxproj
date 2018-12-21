@@ -28,6 +28,7 @@
 		9BAF71BB219F021800750EF3 /* Body1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF71BA219F021700750EF3 /* Body1.png */; };
 		9BB3140821CD019500697960 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140721CD019500697960 /* ImageTools.swift */; };
 		9BB3140A21CD245100697960 /* RoundCornersWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140921CD245100697960 /* RoundCornersWithBorder.swift */; };
+		9BB3140C21CD32B500697960 /* HatchStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140B21CD32B500697960 /* HatchStyling.swift */; };
 		9BF7DAC921C2A0E3005941F2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7DAC821C2A0E3005941F2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		9BAF71BA219F021700750EF3 /* Body1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Body1.png; sourceTree = "<group>"; };
 		9BB3140721CD019500697960 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		9BB3140921CD245100697960 /* RoundCornersWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersWithBorder.swift; sourceTree = "<group>"; };
+		9BB3140B21CD32B500697960 /* HatchStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchStyling.swift; sourceTree = "<group>"; };
 		9BF7DAC821C2A0E3005941F2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B83EE5FC721D6F2E41FB9530 /* Pods-Point-And-ShootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-ShootUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-ShootUITests/Pods-Point-And-ShootUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD2B18A16FF647FCA2FCC0D /* Pods-Point-And-Shoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Point-And-Shoot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				9BAF7190219EE57100750EF3 /* Main.storyboard */,
 				9BAF7195219EE57700750EF3 /* LaunchScreen.storyboard */,
 				9BB3140921CD245100697960 /* RoundCornersWithBorder.swift */,
+				9BB3140B21CD32B500697960 /* HatchStyling.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 			files = (
 				9B7B03E921A782C1003A1CD4 /* Picture.swift in Sources */,
 				9B09584521BE93360088B6EA /* ChoosingFilmVC.swift in Sources */,
+				9BB3140C21CD32B500697960 /* HatchStyling.swift in Sources */,
 				9BB3140821CD019500697960 /* ImageTools.swift in Sources */,
 				9BAF718F219EE57100750EF3 /* CameraVC.swift in Sources */,
 				9BB3140A21CD245100697960 /* RoundCornersWithBorder.swift in Sources */,
