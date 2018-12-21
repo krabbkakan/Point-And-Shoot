@@ -9,5 +9,11 @@
 class Film {
     var name : String = ""
     var numberOfPics : Int = 24
-    var pictures : [Picture] = [Picture]()
+    var pictures : [Picture]
+    
+    init(name: String, numberOfPics: Int) {
+        self.name = name
+        self.numberOfPics = numberOfPics
+        pictures = [Picture]()
+    }
 }

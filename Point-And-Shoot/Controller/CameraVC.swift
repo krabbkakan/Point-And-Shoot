@@ -9,16 +9,33 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class CameraVC: UIViewController {
     
-    var captureSession: AVCaptureSession?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-    var capturePhotoOutput: AVCapturePhotoOutput?
- 
+    //Outlets
     @IBOutlet weak var previewView: UIView!
     
     @IBOutlet weak var triggerButton: UIButton!
-   
+    
+    @IBOutlet weak var counterLabel: UILabel!
+    
+    @IBOutlet weak var filmIndicator: RoundCornersWithBorder!
+    
+    @IBOutlet weak var hatchOpener: RoundCornersWithBorder!
+    
+    
+    //Variables
+    var pictures = [Picture]()
+    
+    var counter : Int = 0
+    
+    var isFilmLoaded : Bool = false
+    
+    //AVFoundation
+    var captureSession: AVCaptureSession?
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var capturePhotoOutput: AVCapturePhotoOutput?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareCamera()
@@ -69,6 +86,10 @@ class ViewController: UIViewController {
     }
     
     func saveImage(image: UIImage) -> Bool {
+        
+        let filename = "image" + String(counter) + ".png"
+        
+        
         guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
             return false
         }
@@ -76,7 +97,7 @@ class ViewController: UIViewController {
             return false
         }
         do {
-            try data.write(to: directory.appendingPathComponent("fileName.png")!)
+            try data.write(to: directory.appendingPathComponent(filename)!)
             return true
         } catch {
             print(error.localizedDescription)
@@ -100,11 +121,18 @@ class ViewController: UIViewController {
         // Call capturePhoto method by passing our photo settings and a
         // delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+        
+        counter+=1
+    }
+    
+    @IBAction func hatchOpenerPressed(_ sender: Any) {
+        //Destroy 3 images
+        
     }
     
 }
 
-extension ViewController : AVCapturePhotoCaptureDelegate {
+extension CameraVC : AVCapturePhotoCaptureDelegate {
     func photoOutput(_ captureOutput: AVCapturePhotoOutput,
                      didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?,
                      previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?,
