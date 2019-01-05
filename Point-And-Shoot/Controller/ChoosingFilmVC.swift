@@ -8,38 +8,41 @@
 
 import UIKit
 
+protocol filmSelectionDelegate {
+    func didTapChoice(numOfpics: Int, isBW: Bool)
+}
+
 class ChoosingFilmVC: UIViewController {
+    
+    var selectionDelegate : filmSelectionDelegate!
     
     @IBOutlet weak var bw24Button: UIButton!
     @IBOutlet weak var bw36Button: UIButton!
     @IBOutlet weak var color24Button: UIButton!
     
-    //Variables
-    var numberOfPicsChoosen : Int = 24
-    var isBW = true
-    
-    var film : Film = Film(name: "", numberOfPics: 0)
+//    //Variables
+//    var numberOfPicsChoosen : Int = 24
+//    var isBW = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+   
+    @IBAction func twentyFourBwTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(numOfpics: 24, isBW: true)
+        dismiss(animated: true, completion: nil)
+    }
+   
+    @IBAction func thirtySixBwTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(numOfpics: 36, isBW: true)
+        dismiss(animated: true, completion: nil)
+    }
+  
+    @IBAction func twentyFourColorTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(numOfpics: 24, isBW: false)
+        dismiss(animated: true, completion: nil)
     }
     
-    func buttonTapped(_ sender: UIButton) {
-        switch sender {
-        case bw24Button:
-            film.name = "myFilm24"
-            film.numberOfPics = 24
-        case bw36Button:
-            film.name = "myFilm36"
-            film.numberOfPics = 24
-        case color24Button:
-            film.name = "myFilmColor"
-            film.numberOfPics = 36
-        default:
-            return
-        }
-}
 }
 
 

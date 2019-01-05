@@ -9,7 +9,17 @@
 import Foundation
 
 // Message Strings
+let noFilm : String = "Ooops, No film!"
+let openedHatch : String = "Hatch opened! 3 pictures was destroyed"
 
-var noFilm : String = "Ooops, No film!"
-var openedHatch : String = "Hatch opened! 3 pictures was destroyed"
+//File endings
+let img : String = "img"
+let png : String = ".png"
+
+// Segues
+let goToGallery : String = "goToGallery"
+let goToLogin : String = "goToLogin"
+let goToRegister : String = "goToRegister"
+let goToChooseFilm : String = "goToChooseFilm"
+let goToPictures : String = "goToPictures"
 

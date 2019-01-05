@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 import AVFoundation
 
+protocol filmCreatorDelegate {
+    func didDevelopFilm(date: Date, pictures: [UIImage], isBW: Bool, name: String)
+}
+
 class CameraVC: UIViewController {
     
     //Outlets
@@ -25,11 +29,24 @@ class CameraVC: UIViewController {
     @IBOutlet weak var hatchView: HatchStyling!
     
     //Variables
-    var pictures = [Picture]()
+    var filmName : String = ""
+    
+    var pictures = [UIImage]()
+    
+    var isFilmLoaded : Bool = false
+    
+    var isGalleryButtonActive : Bool = false
+    
+    var isCurrentFilmBW : Bool = false
     
     var counter : Int = 0
     
-    var isFilmLoaded : Bool = false
+    let defaults = UserDefaults.standard
+    
+    let imageTools = ImageTools()
+    
+    var creatorDelegate : filmCreatorDelegate!
+    
     
     //AVFoundation
     var captureSession: AVCaptureSession?
@@ -39,10 +56,19 @@ class CameraVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         prepareCamera()
+        
+        isGalleryButtonActive = checkGalleryButton()
+        
+        isCurrentFilmBW = checkIfBW()
+        
+        counter = checkCurrentPic()
+        setCounterOnCamera(counterNum: counter)
     }
     
     func prepareCamera() {
+        
         captureSession?.sessionPreset = AVCaptureSession.Preset.photo
         startSession()
     }
@@ -81,14 +107,14 @@ class CameraVC: UIViewController {
     func createPreviewLayer(session: AVCaptureSession )  {
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        videoPreviewLayer!.connection?.videoOrientation =   AVCaptureVideoOrientation.landscapeLeft
+        videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
         videoPreviewLayer?.frame = view.layer.bounds
         previewView.layer.addSublayer(videoPreviewLayer!)
     }
     
     func saveImage(image: UIImage) -> Bool {
         
-        let filename = "image" + String(counter) + ".png"
+        let filename = img + String(checkCurrentPic()) + png
         
         
         guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
@@ -106,8 +132,6 @@ class CameraVC: UIViewController {
         }
     }
     
-    
-    
     @IBAction func takeAPhoto(_ sender: Any) {
         
         // Make sure capturePhotoOutput is valid
@@ -123,14 +147,146 @@ class CameraVC: UIViewController {
         // delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
         
-        counter+=1
+        counter-=1
+        setCounterOnCamera(counterNum: counter)
+        setCounterInDefaults(picNumber: counter)
+        
+        if counter <= 1 {
+            developFilm()
+        }
+        
+    }
+    
+//    func saveImageURLToDefaults(url: URL, key: String) {
+//        defaults.set(url, forKey: key)
+//    }
+    
+    func setCounterInDefaults(picNumber: Int) {
+        
+//        var currentPic : Int = checkCurrentPic()
+//
+//        currentPic += 1
+        
+        defaults.set(picNumber, forKey: Keys.currentPicNumber)
+        
+    }
+    
+    func checkCurrentPic() -> Int {
+        
+        let int = defaults.integer(forKey: Keys.currentPicNumber)
+        
+        let currentPic : Int = int
+        
+        print("currentPic: \(currentPic)")
+        
+        return currentPic
+    }
+    
+    func setCounterOnCamera(counterNum: Int) {
+        let counterNumStringVal = String(counterNum)
+        counterLabel.text = counterNumStringVal
+    }
+    
+    func setToBW() {
+        defaults.set(true, forKey: Keys.isBW)
+    }
+    
+    func checkIfBW() -> Bool {
+        //returns true if BW
+        return defaults.bool(forKey: Keys.isBW)
+    }
+    
+    func setGalleryButtonActive() {
+        
+        if !isGalleryButtonActive {
+            defaults.set(true, forKey: Keys.isGalleryButtonActive)
+        }
+        
+        // Show Button on camera
+        
+    }
+    
+    func checkGalleryButton() -> Bool {
+        return defaults.bool(forKey: Keys.isGalleryButtonActive)
+    }
+    
+    func developFilm() {
+        triggerButton.isEnabled = false
+        triggerButton.isHidden = true
+        
+        filmName = nameFilm()
+        
+        // loop through all pictures taken and create a film roll with them in
+       
+        for index in 1...36 {
+            let picture : UIImage? = imageTools.loadImageFromDocumentDirectory(nameOfImage: img + String(index) + png)
+            
+            if let pic = picture {
+                pictures.append(pic)
+            } else{
+               return
+            }
+        }
+        
+
+        
+        // make a segue to galleryVC
+        
+        creatorDelegate.didDevelopFilm(date: Date(), pictures: pictures, isBW: isCurrentFilmBW, name: filmName)
+        let galleryVC = storyboard?.instantiateViewController(withIdentifier: "galleryVC") as! GalleryVC
+        present(galleryVC, animated: true, completion: nil)
+        
+        
+        
+
+    
+        // in galleryVC, show filmroll icon with name
+        //if roll is pushed, show the containing pictures
+        
+        setGalleryButtonActive()
+        
+    }
+    
+    func nameFilm() -> String {
+        var filmname = "Your filmroll"
+        
+        let alert = UIAlertController(title: "name your film roll:", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Write here..."
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            
+            if let name = alert.textFields?.first?.text {
+                print("name: \(name)")
+                filmname = name
+            }
+        }))
+        
+        self.present(alert, animated: true)
+        return filmname
     }
     
     @IBAction func hatchOpenerPressed(_ sender: Any) {
        hatchView.animateHatch()
+        
+        // if film loaded
+        
         //Destroy 3 images
         
+        // show message
         
+        // if no film
+        // segue to choose filmVC
+        
+        if !isFilmLoaded {
+            let filmChoiceVC = storyboard?.instantiateViewController(withIdentifier: "ChoosingFilmVC") as! ChoosingFilmVC
+            filmChoiceVC.selectionDelegate = self
+            present(filmChoiceVC, animated: true, completion: nil)
+        }
+
     }
     
 }
@@ -173,6 +329,19 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
             }
            
         }
+    }
+}
+
+extension CameraVC: filmSelectionDelegate {
+    func didTapChoice(numOfpics: Int, isBW: Bool) {
+        counter = numOfpics
+        isCurrentFilmBW = isBW
+
+        isFilmLoaded = true
+        setCounterOnCamera(counterNum: counter)
+        setCounterInDefaults(picNumber: counter)
+        hatchView.animateHatchBackToNormal()
+        filmIndicator.makeGreen()
     }
 }
 

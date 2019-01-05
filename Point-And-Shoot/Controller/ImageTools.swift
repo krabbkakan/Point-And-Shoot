@@ -17,7 +17,7 @@ class ImageTools {
         let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
         if let dirPath = paths.first{
             let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent(nameOfImage)
-            let image    = UIImage(contentsOfFile: imageURL.path)
+            let image = UIImage(contentsOfFile: imageURL.path)
             return image!
         }
         return UIImage.init(named: "default.png")!

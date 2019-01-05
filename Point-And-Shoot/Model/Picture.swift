@@ -7,5 +7,7 @@
 //
 
 class Picture {
+    // is destroyed
     
+    // if bw or destroyed, displayed as so in gallery
 }

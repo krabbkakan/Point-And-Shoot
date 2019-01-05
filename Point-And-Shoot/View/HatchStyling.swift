@@ -38,6 +38,10 @@ class HatchStyling: UIView {
         
     }
     
+    func animateHatchBackToNormal() {
+        self.layer.masksToBounds = true
+    }
+    
     
 
 }

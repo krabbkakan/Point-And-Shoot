@@ -5,15 +5,18 @@
 //  Created by Erik Hede on 23/11/2018.
 //  Copyright © 2018 Erik Hede. All rights reserved.
 //
+import UIKit
 
 class Film {
     var name : String = ""
-    var numberOfPics : Int = 24
-    var pictures : [Picture]
+    let creationDate : Date
+    var pictures : [UIImage]
+    let isBW : Bool
     
-    init(name: String, numberOfPics: Int) {
+    init(name: String, date: Date, pictures: [UIImage], isBW: Bool) {
         self.name = name
-        self.numberOfPics = numberOfPics
-        pictures = [Picture]()
+        self.pictures = pictures
+        self.creationDate = date
+        self.isBW = isBW
     }
 }
