@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 import AVFoundation
+import SVProgressHUD
+import Firebase
+import FirebaseStorage
 
 protocol filmCreatorDelegate {
     func didDevelopFilm(date: Date, pictures: [UIImage], isBW: Bool, name: String)
@@ -53,6 +56,10 @@ class CameraVC: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     
+    //Firebase sorage
+    var imageStorageRef : StorageReference {
+        return Storage.storage().reference() .child("images")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,22 +121,52 @@ class CameraVC: UIViewController {
     
     func saveImage(image: UIImage) -> Bool {
         
-        let filename = img + String(checkCurrentPic()) + png
+        // saving to directory
         
+//        let filename = img + String(checkCurrentPic()) + png
+//
+//
+//        guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
+//            return false
+//        }
+//        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
+//            return false
+//        }
+//        do {
+//            try data.write(to: directory.appendingPathComponent(filename)!)
+//            return true
+//        } catch {
+//            print(error.localizedDescription)
+//            return false
+//        }
         
-        guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
-            return false
+        // saving to firebase storage
+        
+        var imageData = Data()
+        imageData = image.jpegData(compressionQuality: 0.75)!
+        
+        let filename : String = img + String(checkCurrentPic()) + jpg
+        
+        let uploadImageRef = imageStorageRef.child(filename)
+        
+        let uploadImageTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+            print("upload task finished")
+            print(metadata ?? "No Metadata")
+            print(error ?? "No Error")
+            SVProgressHUD.dismiss()
+            // enable button
         }
-        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
-            return false
+        
+        uploadImageTask.observe(.progress) { (snapshot) in
+            SVProgressHUD.show()
+            // disable butto
+            print(snapshot.progress ?? "No more progress")
         }
-        do {
-            try data.write(to: directory.appendingPathComponent(filename)!)
-            return true
-        } catch {
-            print(error.localizedDescription)
-            return false
-        }
+        
+        uploadImageTask.resume()
+    
+        return true
+
     }
     
     @IBAction func takeAPhoto(_ sender: Any) {
@@ -236,10 +273,6 @@ class CameraVC: UIViewController {
         let galleryVC = storyboard?.instantiateViewController(withIdentifier: "galleryVC") as! GalleryVC
         present(galleryVC, animated: true, completion: nil)
         
-        
-        
-
-    
         // in galleryVC, show filmroll icon with name
         //if roll is pushed, show the containing pictures
         
@@ -305,17 +338,17 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
                 return
         }
         
-        // Convert photo same buffer to a jpeg image data by using AVCapturePhotoOutput
+        // Convert photo buffer to jpeg image data by using AVCapturePhotoOutput
         guard let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
             return
         }
         
         //        AVCapturePhoto fileDataRepresentation]
         
-        // Initialise an UIImage with our image data
+        // Initialise an UIImage with image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
         if let image = capturedImage {
-            // Save our captured image to photos album
+            // Save captured image to photos album
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             
             //Saving image to directory

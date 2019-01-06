@@ -15,6 +15,7 @@ let openedHatch : String = "Hatch opened! 3 pictures was destroyed"
 //File endings
 let img : String = "img"
 let png : String = ".png"
+let jpg : String = ".jpg"
 
 // Segues
 let goToGallery : String = "goToGallery"
