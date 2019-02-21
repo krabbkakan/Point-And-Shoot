@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreImage
+
 
 
 class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -38,7 +40,7 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FilmCell", for: indexPath) as! FilmCollectionViewCell
         cell.filmNameLabel.text = filmrolls[indexPath.item].name
-        if filmrolls[indexPath.item].isBW {
+        if filmrolls[indexPath.item].isBw {
         cell.filmCell.image = bwRoll
         } else {
            cell.filmCell.image = colorRoll
@@ -47,11 +49,34 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         return cell
     }
     
+//    func makeImageBlackAndWhite(image: UIImage) -> UIImage {
+//      
+//        guard let currentCGImage = image.cgImage else { return }
+//        let currentCIImage = CIImage(cgImage: currentCGImage)
+//        
+//        let filter = CIFilter(name: "CIColorMonochrome")
+//        filter?.setValue(currentCIImage, forKey: "inputImage")
+//        
+//        // set a gray value for the tint color
+//        filter?.setValue(CIColor(red: 0.7, green: 0.7, blue: 0.7), forKey: "inputColor")
+//        
+//        filter?.setValue(1.0, forKey: "inputIntensity")
+//        guard let outputImage = filter?.outputImage else { return }
+//        
+//        let context = CIContext()
+//        
+//        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+//            let processedImage = UIImage(cgImage: cgimg)
+//            return processedImage
+//        }
+//        
+//    }
+    
 }
 
 extension GalleryVC: filmCreatorDelegate {
-    func didDevelopFilm(date: Date, pictures: [UIImage], isBW: Bool, name: String) {
-        let film = Film(name: name, date: date, pictures: pictures, isBW: isBW)
+    func didDevelopFilm(date: Date, pictures: [Picture], isBW isBw: Bool, name: String) {
+        let film = Film(name: name, pictures: pictures, isBw: isBw)
         filmrolls.append(film)
     }
     

@@ -14,4 +14,5 @@ struct Keys {
     static let isGalleryButtonActive = "isGalleryButtonActive"
     static let isBW = "isBW"
     static let email = "email"
+    static let filmNumber = "filmNumber"
 }

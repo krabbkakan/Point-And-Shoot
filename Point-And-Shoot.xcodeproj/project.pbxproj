@@ -13,11 +13,14 @@
 		9B09583F21BA98600088B6EA /* BwRoll.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B09583E21BA98600088B6EA /* BwRoll.png */; };
 		9B09584321BAA1200088B6EA /* ColorFilm.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B09584221BAA1200088B6EA /* ColorFilm.png */; };
 		9B09584521BE93360088B6EA /* ChoosingFilmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B09584421BE93360088B6EA /* ChoosingFilmVC.swift */; };
+		9B0A0635220D871C00AA75FC /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A0634220D871C00AA75FC /* Delay.swift */; };
+		9B0A0637220DA20400AA75FC /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A0636220DA20400AA75FC /* Picture.swift */; };
+		9B57BF5321EA2B7D00FC0F27 /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B57BF5221EA2B7D00FC0F27 /* example.jpg */; };
 		9B633A2221A7723400E37254 /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2121A7723300E37254 /* Button.png */; };
 		9B633A2421A7723B00E37254 /* Film-Hatch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2321A7723B00E37254 /* Film-Hatch.png */; };
 		9B633A2621A77AF600E37254 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B633A2521A77AF600E37254 /* GoogleService-Info.plist */; };
+		9B74D0C621E24E040003C531 /* GalleryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B74D0C521E24E030003C531 /* GalleryIcon.png */; };
 		9B7B03E721A782AD003A1CD4 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B03E621A782AD003A1CD4 /* Film.swift */; };
-		9B7B03E921A782C1003A1CD4 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B03E821A782C1003A1CD4 /* Picture.swift */; };
 		9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718C219EE57100750EF3 /* AppDelegate.swift */; };
 		9BAF718F219EE57100750EF3 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF718E219EE57100750EF3 /* CameraVC.swift */; };
 		9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF7190219EE57100750EF3 /* Main.storyboard */; };
@@ -26,7 +29,6 @@
 		9BAF71A2219EE57700750EF3 /* Point_And_ShootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71A1219EE57700750EF3 /* Point_And_ShootTests.swift */; };
 		9BAF71AD219EE57800750EF3 /* Point_And_ShootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */; };
 		9BAF71BB219F021800750EF3 /* Body1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF71BA219F021700750EF3 /* Body1.png */; };
-		9BB3140821CD019500697960 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140721CD019500697960 /* ImageTools.swift */; };
 		9BB3140A21CD245100697960 /* RoundCornersWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140921CD245100697960 /* RoundCornersWithBorder.swift */; };
 		9BB3140C21CD32B500697960 /* HatchStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140B21CD32B500697960 /* HatchStyling.swift */; };
 		9BB3141021D665F200697960 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB3140F21D665F200697960 /* Keys.swift */; };
@@ -67,11 +69,14 @@
 		9B09583E21BA98600088B6EA /* BwRoll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BwRoll.png; sourceTree = "<group>"; };
 		9B09584221BAA1200088B6EA /* ColorFilm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorFilm.png; sourceTree = "<group>"; };
 		9B09584421BE93360088B6EA /* ChoosingFilmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingFilmVC.swift; sourceTree = "<group>"; };
+		9B0A0634220D871C00AA75FC /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		9B0A0636220DA20400AA75FC /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		9B57BF5221EA2B7D00FC0F27 /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		9B633A2121A7723300E37254 /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		9B633A2321A7723B00E37254 /* Film-Hatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Film-Hatch.png"; sourceTree = "<group>"; };
 		9B633A2521A77AF600E37254 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B74D0C521E24E030003C531 /* GalleryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GalleryIcon.png; sourceTree = "<group>"; };
 		9B7B03E621A782AD003A1CD4 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
-		9B7B03E821A782C1003A1CD4 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		9BAF7189219EE57100750EF3 /* Point-And-Shoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Point-And-Shoot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAF718C219EE57100750EF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAF718E219EE57100750EF3 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -86,7 +91,6 @@
 		9BAF71AC219EE57800750EF3 /* Point_And_ShootUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point_And_ShootUITests.swift; sourceTree = "<group>"; };
 		9BAF71AE219EE57800750EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BAF71BA219F021700750EF3 /* Body1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Body1.png; sourceTree = "<group>"; };
-		9BB3140721CD019500697960 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		9BB3140921CD245100697960 /* RoundCornersWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersWithBorder.swift; sourceTree = "<group>"; };
 		9BB3140B21CD32B500697960 /* HatchStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatchStyling.swift; sourceTree = "<group>"; };
 		9BB3140F21D665F200697960 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		9B28A79121A6B859009FB3CD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9B57BF5221EA2B7D00FC0F27 /* example.jpg */,
+				9B74D0C521E24E030003C531 /* GalleryIcon.png */,
 				9B09583E21BA98600088B6EA /* BwRoll.png */,
 				9B09584221BAA1200088B6EA /* ColorFilm.png */,
 				9BAF71BA219F021700750EF3 /* Body1.png */,
@@ -162,7 +168,6 @@
 				9BAF718C219EE57100750EF3 /* AppDelegate.swift */,
 				9BAF718E219EE57100750EF3 /* CameraVC.swift */,
 				9B09584421BE93360088B6EA /* ChoosingFilmVC.swift */,
-				9BB3140721CD019500697960 /* ImageTools.swift */,
 				9BB3141121D6850E00697960 /* GalleryVC.swift */,
 				9BE4042F21DEC6F1000ACC9A /* LoginVC.swift */,
 				9BE4043121DED5A7000ACC9A /* RegisterVC.swift */,
@@ -175,10 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				9B7B03E621A782AD003A1CD4 /* Film.swift */,
-				9B7B03E821A782C1003A1CD4 /* Picture.swift */,
 				9BF7DAC821C2A0E3005941F2 /* Constants.swift */,
 				9BB3140F21D665F200697960 /* Keys.swift */,
 				9BE4043321DEDA85000ACC9A /* User.swift */,
+				9B0A0634220D871C00AA75FC /* Delay.swift */,
+				9B0A0636220DA20400AA75FC /* Picture.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,7 +379,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B57BF5321EA2B7D00FC0F27 /* example.jpg in Resources */,
 				9B633A2221A7723400E37254 /* Button.png in Resources */,
+				9B74D0C621E24E040003C531 /* GalleryIcon.png in Resources */,
 				9BAF7197219EE57700750EF3 /* LaunchScreen.storyboard in Resources */,
 				9BAF7194219EE57700750EF3 /* Assets.xcassets in Resources */,
 				9BAF7192219EE57100750EF3 /* Main.storyboard in Resources */,
@@ -505,33 +513,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Point-And-Shoot/Pods-Point-And-Shoot-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -580,7 +582,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7B03E921A782C1003A1CD4 /* Picture.swift in Sources */,
 				9B09584521BE93360088B6EA /* ChoosingFilmVC.swift in Sources */,
 				9BE4043021DEC6F1000ACC9A /* LoginVC.swift in Sources */,
 				9BB3141621D7A2AB00697960 /* MessageViewStyling.swift in Sources */,
@@ -588,14 +589,15 @@
 				9BE4043821DF1838000ACC9A /* PicturesVC.swift in Sources */,
 				9BB3141421D7925500697960 /* FilmCollectionViewCell.swift in Sources */,
 				9BB3140C21CD32B500697960 /* HatchStyling.swift in Sources */,
-				9BB3140821CD019500697960 /* ImageTools.swift in Sources */,
 				9BAF718F219EE57100750EF3 /* CameraVC.swift in Sources */,
 				9BB3140A21CD245100697960 /* RoundCornersWithBorder.swift in Sources */,
 				9BE4043221DED5A7000ACC9A /* RegisterVC.swift in Sources */,
 				9B7B03E721A782AD003A1CD4 /* Film.swift in Sources */,
+				9B0A0635220D871C00AA75FC /* Delay.swift in Sources */,
 				9BAF718D219EE57100750EF3 /* AppDelegate.swift in Sources */,
 				9BB3141221D6850E00697960 /* GalleryVC.swift in Sources */,
 				9BF7DAC921C2A0E3005941F2 /* Constants.swift in Sources */,
+				9B0A0637220DA20400AA75FC /* Picture.swift in Sources */,
 				9BB3141021D665F200697960 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,7 +784,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-Shoot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -801,7 +803,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "se.erikhede.ma17.Point-And-Shoot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

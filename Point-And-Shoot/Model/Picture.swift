@@ -2,12 +2,20 @@
 //  Picture.swift
 //  Point-And-Shoot
 //
-//  Created by Erik Hede on 23/11/2018.
-//  Copyright © 2018 Erik Hede. All rights reserved.
+//  Created by Erik Hede on 08/02/2019.
+//  Copyright © 2019 Erik Hede. All rights reserved.
 //
 
+import Foundation
+
 class Picture {
-    // is destroyed
+    private(set) var timestamp : Date!
+    private(set) var isBw : Bool!
+    private(set) var documentId : String!
     
-    // if bw or destroyed, displayed as so in gallery
+    init(timestamp: Date, isBw: Bool, documentId: String) {
+        self.timestamp = timestamp
+        self.isBw = isBw
+        self.documentId = documentId
+    }
 }

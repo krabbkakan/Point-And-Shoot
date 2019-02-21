@@ -121,6 +121,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Body1" translatesAutoresizingMaskIntoConstraints="NO" id="8na-FG-Sem">
                                 <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-eW-XGS">
+                                <rect key="frame" x="156" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9L4-Jn-XC4"/>
+                                    <constraint firstAttribute="width" constant="50" id="OAl-UT-ikf"/>
+                                </constraints>
+                                <state key="normal" image="GalleryIcon.png"/>
+                                <connections>
+                                    <action selector="galleryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2X-6i-rCM"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGR-Dx-eCr">
                                 <rect key="frame" x="592" y="19" width="100" height="100"/>
                                 <constraints>
@@ -213,8 +224,10 @@
                             <constraint firstItem="uJn-jB-tfE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="9o1-OK-YJx"/>
                             <constraint firstItem="kXn-Hg-HBR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="BTe-Ci-VSD"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DXy-Ts-w5M"/>
+                            <constraint firstItem="Sfj-eW-XGS" firstAttribute="leading" secondItem="kXn-Hg-HBR" secondAttribute="trailing" constant="51" id="UFD-2n-aGP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AGR-Dx-eCr" secondAttribute="trailing" constant="44" id="WtY-jR-qMF"/>
                             <constraint firstItem="xmi-oy-E0V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="agb-S5-HVD"/>
+                            <constraint firstItem="Sfj-eW-XGS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="bKF-M4-3cf"/>
                             <constraint firstItem="xmi-oy-E0V" firstAttribute="top" secondItem="uJn-jB-tfE" secondAttribute="bottom" constant="40" id="bWF-7e-T8E"/>
                             <constraint firstItem="8na-FG-Sem" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e3i-Q4-O0H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xmi-oy-E0V" secondAttribute="trailing" constant="50" id="gQo-ks-3oM"/>
@@ -230,6 +243,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="kXn-Hg-HBR" id="0XY-04-CNB"/>
                         <outlet property="filmIndicator" destination="zwg-EC-SRh" id="ycf-sf-3AS"/>
+                        <outlet property="galleryButton" destination="Sfj-eW-XGS" id="WM5-Zu-xX0"/>
                         <outlet property="hatchOpener" destination="F3F-17-4sb" id="YYZ-Dz-fzP"/>
                         <outlet property="hatchView" destination="xmi-oy-E0V" id="zPI-de-7pw"/>
                         <outlet property="previewView" destination="uJn-jB-tfE" id="auY-Ne-SDh"/>
@@ -735,6 +749,7 @@
         <image name="Button.png" width="189" height="189"/>
         <image name="BwRoll.png" width="200" height="231"/>
         <image name="ColorFilm.png" width="200" height="230"/>
+        <image name="GalleryIcon.png" width="360" height="350"/>
         <image name="error.png" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>

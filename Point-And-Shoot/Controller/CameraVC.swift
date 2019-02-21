@@ -10,10 +10,10 @@ import UIKit
 import AVFoundation
 import SVProgressHUD
 import Firebase
-import FirebaseStorage
+//import FirebaseStorage
 
 protocol filmCreatorDelegate {
-    func didDevelopFilm(date: Date, pictures: [UIImage], isBW: Bool, name: String)
+    func didDevelopFilm(date: Date, pictures: [Picture], isBW: Bool, name: String)
 }
 
 class CameraVC: UIViewController {
@@ -30,11 +30,13 @@ class CameraVC: UIViewController {
     @IBOutlet weak var hatchOpener: RoundCornersWithBorder!
     
     @IBOutlet weak var hatchView: HatchStyling!
+  
+    @IBOutlet weak var galleryButton: UIButton!
     
     //Variables
     var filmName : String = ""
     
-    var pictures = [UIImage]()
+    var pictures = [Picture]()
     
     var isFilmLoaded : Bool = false
     
@@ -44,11 +46,13 @@ class CameraVC: UIViewController {
     
     var counter : Int = 0
     
+    var filmCounter = 0
+    
     let defaults = UserDefaults.standard
     
-    let imageTools = ImageTools()
-    
     var creatorDelegate : filmCreatorDelegate!
+    
+    
     
     
     //AVFoundation
@@ -56,7 +60,7 @@ class CameraVC: UIViewController {
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     
-    //Firebase sorage
+    //Firebase storage
     var imageStorageRef : StorageReference {
         return Storage.storage().reference() .child("images")
     }
@@ -66,16 +70,42 @@ class CameraVC: UIViewController {
         
         prepareCamera()
         
+        // Check if film is loaded
+        isFilmLoaded = checkFilmStatusInDefaults()
+        
+//        if checkHowManyRollsHasBeenTaken() != nil {
+//            filmCounter = checkHowManyRollsHasBeenTaken()!
+//        } else {
+//            filmCounter = 0
+//        }
+        
+        
+        if isFilmLoaded {
+            setTriggerButtonToActive()
+            filmIndicator.makeGreen()
+        } else {
+            disableTriggerButton()
+            setCounterInDefaults(picNumber: 0)
+            filmIndicator.awakeFromNib()
+        }
+        
         isGalleryButtonActive = checkGalleryButton()
+        
+        if isGalleryButtonActive {
+            setGalleryButtonActiveAndShow()
+        } else {
+//            disableGalleryButtonAndHide()
+            setGalleryButtonActiveAndShow()
+        }
         
         isCurrentFilmBW = checkIfBW()
         
+        // Check counter in defaults and set value on camera
         counter = checkCurrentPic()
         setCounterOnCamera(counterNum: counter)
     }
     
     func prepareCamera() {
-        
         captureSession?.sessionPreset = AVCaptureSession.Preset.photo
         startSession()
     }
@@ -121,53 +151,97 @@ class CameraVC: UIViewController {
     
     func saveImage(image: UIImage) -> Bool {
         
-        // saving to directory
-        
-//        let filename = img + String(checkCurrentPic()) + png
-//
-//
-//        guard let data = image.jpegData(compressionQuality: 1.0) ?? image.pngData() else {
-//            return false
-//        }
-//        guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false) as NSURL else {
-//            return false
-//        }
-//        do {
-//            try data.write(to: directory.appendingPathComponent(filename)!)
-//            return true
-//        } catch {
-//            print(error.localizedDescription)
-//            return false
-//        }
-        
         // saving to firebase storage
+        
+        var success = true
         
         var imageData = Data()
         imageData = image.jpegData(compressionQuality: 0.75)!
         
         let filename : String = img + String(checkCurrentPic()) + jpg
         
+        let randomString : String  // get generated id from firebase////////////////////////////////////////////////////////////////////////
+        
         let uploadImageRef = imageStorageRef.child(filename)
         
         let uploadImageTask = uploadImageRef.putData(imageData, metadata: nil) { (metadata, error) in
+            if let error = error {
+                print(error)
+                success = false
+            }
+            
+        let downloadUrl = uploadImageRef.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    print(error)
+                    return
+                } else {
+                    //put url in db
+                    
+                }
+            })
+            
+            print(downloadUrl)
+    
             print("upload task finished")
             print(metadata ?? "No Metadata")
-            print(error ?? "No Error")
             SVProgressHUD.dismiss()
             // enable button
+            self.setTriggerButtonToActive()
         }
         
         uploadImageTask.observe(.progress) { (snapshot) in
             SVProgressHUD.show()
             // disable butto
+            self.disableTriggerButton()
             print(snapshot.progress ?? "No more progress")
         }
-        
-        uploadImageTask.resume()
     
-        return true
-
+        uploadImageTask.resume()
+       
+        return success
     }
+    
+    func saveImageInfoToDb() {
+        
+        let picCollection = Firestore.firestore().collection("pictures")
+        
+        picCollection.addDocument(data: [
+            "isBw" : checkIfBW(),
+            "timestamp" : FieldValue.serverTimestamp()]) { (error) in
+            if let error = error {
+                debugPrint("Error adding document: \(error)" )
+            } else {
+                print(picCollection.document().documentID)
+            }
+        }
+        
+    }
+    
+//    func downloadImage() {
+//        
+//        let filename : String = img + String(checkCurrentPic()) + jpg
+//        
+//        let downloadImageRef = imageStorageRef.child(filename)
+//        
+//        let downloadtask = downloadImageRef.getData(maxSize: 1024 * 1024 * 12) { (data, error) in
+//            if let data = data {
+//                let image = UIImage(data: data)
+//                
+//                //set whats gonna happen to the ui image here
+//                
+//                
+//                
+//            }
+//            print(error ?? "NO ERROR")
+//        }
+//        
+//        downloadtask.observe(.progress) { (snapshot) in
+//            print(snapshot.progress ?? "NO MORE PROGRESS")
+//        }
+//        
+//        downloadtask.resume()
+//        
+//    }
     
     @IBAction func takeAPhoto(_ sender: Any) {
         
@@ -194,18 +268,16 @@ class CameraVC: UIViewController {
         
     }
     
-//    func saveImageURLToDefaults(url: URL, key: String) {
-//        defaults.set(url, forKey: key)
-//    }
+    func setFilmStatusInDefaults(isFilmLoaded: Bool) {
+        defaults.set(isFilmLoaded, forKey: Keys.isFilmLoaded)
+    }
+    
+    func checkFilmStatusInDefaults() -> Bool {
+        return defaults.bool(forKey: Keys.isFilmLoaded)
+    }
     
     func setCounterInDefaults(picNumber: Int) {
-        
-//        var currentPic : Int = checkCurrentPic()
-//
-//        currentPic += 1
-        
         defaults.set(picNumber, forKey: Keys.currentPicNumber)
-        
     }
     
     func checkCurrentPic() -> Int {
@@ -233,13 +305,29 @@ class CameraVC: UIViewController {
         return defaults.bool(forKey: Keys.isBW)
     }
     
-    func setGalleryButtonActive() {
+    func setTriggerButtonToActive() {
+        triggerButton.isEnabled = true
+    }
+    
+    func disableTriggerButton() {
+        triggerButton.isEnabled = false
+    }
+    
+    func setGalleryButtonActiveAndShow() {
+        galleryButton.isHidden = false
+        galleryButton.isEnabled = true
+    }
+    
+    func disableGalleryButtonAndHide() {
+        galleryButton.isHidden = true
+        galleryButton.isEnabled = false
+    }
+    
+    func setGalleryButtonActiveInDefaults() {
         
         if !isGalleryButtonActive {
             defaults.set(true, forKey: Keys.isGalleryButtonActive)
         }
-        
-        // Show Button on camera
         
     }
     
@@ -247,25 +335,22 @@ class CameraVC: UIViewController {
         return defaults.bool(forKey: Keys.isGalleryButtonActive)
     }
     
+    func setNuberOfFilmsInDefaults(filmNumber: Int) {
+        defaults.set(filmNumber, forKey: Keys.filmNumber)
+    }
+    
+    func checkHowManyRollsHasBeenTaken() -> Int? {
+        let films : Int?
+        films = defaults.integer(forKey: Keys.filmNumber)
+        return films
+    }
+    
+    
     func developFilm() {
-        triggerButton.isEnabled = false
-        triggerButton.isHidden = true
         
         filmName = nameFilm()
         
         // loop through all pictures taken and create a film roll with them in
-       
-        for index in 1...36 {
-            let picture : UIImage? = imageTools.loadImageFromDocumentDirectory(nameOfImage: img + String(index) + png)
-            
-            if let pic = picture {
-                pictures.append(pic)
-            } else{
-               return
-            }
-        }
-        
-
         
         // make a segue to galleryVC
         
@@ -276,8 +361,9 @@ class CameraVC: UIViewController {
         // in galleryVC, show filmroll icon with name
         //if roll is pushed, show the containing pictures
         
-        setGalleryButtonActive()
-        
+        setGalleryButtonActiveInDefaults()
+        setGalleryButtonActiveAndShow()
+    
     }
     
     func nameFilm() -> String {
@@ -305,21 +391,27 @@ class CameraVC: UIViewController {
     @IBAction func hatchOpenerPressed(_ sender: Any) {
        hatchView.animateHatch()
         
-        // if film loaded
-        
-        //Destroy 3 images
-        
-        // show message
-        
         // if no film
         // segue to choose filmVC
-        
         if !isFilmLoaded {
             let filmChoiceVC = storyboard?.instantiateViewController(withIdentifier: "ChoosingFilmVC") as! ChoosingFilmVC
             filmChoiceVC.selectionDelegate = self
             present(filmChoiceVC, animated: true, completion: nil)
+        } else {
+            // if film loaded
+            //Destroy 1 image
+            // show message
+            return
         }
 
+    }
+    @IBAction func galleryButtonPressed(_ sender: Any) {
+        
+        if counter < 1 && isFilmLoaded {
+            performSegue(withIdentifier: "goToGallery", sender: nil)
+        }
+        performSegue(withIdentifier: "goToGallery", sender: nil)
+        
     }
     
 }
@@ -351,7 +443,7 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
             // Save captured image to photos album
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             
-            //Saving image to directory
+            //Saving image to firebas bucket
             let success = saveImage(image: image)
             
             if success {
@@ -371,10 +463,12 @@ extension CameraVC: filmSelectionDelegate {
         isCurrentFilmBW = isBW
 
         isFilmLoaded = true
+        setFilmStatusInDefaults(isFilmLoaded: isFilmLoaded)
         setCounterOnCamera(counterNum: counter)
         setCounterInDefaults(picNumber: counter)
         hatchView.animateHatchBackToNormal()
         filmIndicator.makeGreen()
+        setTriggerButtonToActive()
     }
 }
 
